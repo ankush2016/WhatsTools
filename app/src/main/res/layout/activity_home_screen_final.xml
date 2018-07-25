@@ -6,36 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Activities.ActivityHomeScreenFinal">
 
-
-    <Button
-        android:id="@+id/bWhatsAppDirect"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/border"
-        android:padding="5dp"
-        android:text="@string/btn_direct_msg"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/bWhatsAppStatusDownload"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/bWhatsAppStatusDownload"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/border"
-        android:padding="5dp"
-        android:text="@string/btn_status"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bWhatsAppDirect"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <include
+        android:id="@+id/include"
         layout="@layout/admob_banner_ad"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -44,4 +16,76 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bWhatsAppDirect"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:padding="5dp"
+                android:text="@string/btn_direct_msg"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/bWhatsAppStatusDownload"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/bWhatsAppStatusDownload"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:padding="5dp"
+                android:text="@string/btn_status"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/bWhatsAppDirect"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/bWhatsAppBusinessStatusDownload"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:padding="5dp"
+                android:text="@string/btn_status_wa_business"
+                app:layout_constraintEnd_toStartOf="@+id/button6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bWhatsAppDirect" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:padding="5dp"
+                android:text="Button"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/bWhatsAppBusinessStatusDownload"
+                app:layout_constraintTop_toBottomOf="@+id/bWhatsAppStatusDownload" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

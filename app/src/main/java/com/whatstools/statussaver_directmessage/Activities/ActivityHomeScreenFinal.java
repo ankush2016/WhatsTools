@@ -25,6 +25,9 @@ public class ActivityHomeScreenFinal extends AppCompatActivity {
     @BindView(R.id.bWhatsAppStatusDownload)
     Button bStatusDownload;
 
+    @BindView(R.id.bWhatsAppBusinessStatusDownload)
+    Button bWhatsAppBusinessStatusDownload;
+
     @BindView(R.id.admob_banner_ad)
     AdView mAdView;
 
@@ -37,16 +40,23 @@ public class ActivityHomeScreenFinal extends AppCompatActivity {
         LoadAdmobAd.loadAdmobBannerAds(mAdView);
     }
 
-    @OnClick({R.id.bWhatsAppDirect, R.id.bWhatsAppStatusDownload})
+    @OnClick({R.id.bWhatsAppDirect, R.id.bWhatsAppStatusDownload, R.id.bWhatsAppBusinessStatusDownload})
     public void onButtonClick(View view) {
+        Intent intent;
         switch (view.getId()) {
             case R.id.bWhatsAppDirect:
                 startActivity(new Intent(ActivityHomeScreenFinal.this, ActivityWhatsAppDirectMsg.class));
                 break;
 
             case R.id.bWhatsAppStatusDownload:
-                Intent intent = new Intent(ActivityHomeScreenFinal.this, ActivityWhatsAppGallery.class);
+                intent = new Intent(ActivityHomeScreenFinal.this, ActivityWhatsAppGallery.class);
                 intent.putExtra(WhatsToolsConstants.WHATSAPP_FOLDER, "WhatsApp");
+                startActivity(intent);
+                break;
+
+            case R.id.bWhatsAppBusinessStatusDownload:
+                intent = new Intent(ActivityHomeScreenFinal.this, ActivityWhatsAppGallery.class);
+                intent.putExtra(WhatsToolsConstants.WHATSAPP_FOLDER, "WhatsApp Business");
                 startActivity(intent);
                 break;
         }

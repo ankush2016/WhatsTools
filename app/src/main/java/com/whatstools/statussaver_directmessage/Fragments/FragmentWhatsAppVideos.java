@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 
 import com.whatstools.statussaver_directmessage.Activities.ActivityVideoPlayer;
 import com.whatstools.statussaver_directmessage.Adapters.GalleryAdapter;
+import com.whatstools.statussaver_directmessage.Extras.WhatsToolsConstants;
 import com.whatstools.statussaver_directmessage.R;
 import com.whatstools.statussaver_directmessage.Utilities.RecyclerTouchListener;
 
@@ -41,7 +42,11 @@ public class FragmentWhatsAppVideos extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view_videos);
         videos = new ArrayList<>();
-        proceedAfterPermission();
+
+        Intent i = getActivity().getIntent();
+        String folderName = i.getStringExtra(WhatsToolsConstants.WHATSAPP_FOLDER);
+
+        proceedAfterPermission(folderName);
         mAdapter = new GalleryAdapter(getContext(), videos);
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 3);
@@ -76,8 +81,8 @@ public class FragmentWhatsAppVideos extends Fragment {
         return view;
     }
 
-    private void proceedAfterPermission() {
-        File folder = new File(Environment.getExternalStorageDirectory().toString() + "/WhatsApp/Media/.Statuses");
+    private void proceedAfterPermission(String folderName) {
+        File folder = new File(Environment.getExternalStorageDirectory().toString() + "/" + folderName + "/Media/.Statuses");
         if (folder.exists()) {
             File[] allFiles = folder.listFiles(new FilenameFilter() {
                 public boolean accept(File dir, String name) {
