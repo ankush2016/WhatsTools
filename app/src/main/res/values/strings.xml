@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Whats Tools</string>
+    <string name="title_activity_whats_app_gallery">ActivityWhatsAppGallery</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+
+
+    <string name="admob_banner_ad_id">ca-app-pub-5059726881726792/9722151397</string>
+
+    <string name="btn_direct_msg"><b>Direct Message</b>\n\nSend Message without saving contact</string>
+    <string name="btn_status">Status Saver</string>
+</resources>
