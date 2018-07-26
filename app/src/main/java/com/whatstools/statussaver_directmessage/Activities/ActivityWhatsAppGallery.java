@@ -8,10 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.whatstools.statussaver_directmessage.Adapters.SectionsPageAdapter;
 import com.whatstools.statussaver_directmessage.Fragments.FragmentWhatsAppImages;
 import com.whatstools.statussaver_directmessage.Fragments.FragmentWhatsAppVideos;
 import com.whatstools.statussaver_directmessage.R;
+import com.whatstools.statussaver_directmessage.Utilities.LoadAdmobAd;
 
 public class ActivityWhatsAppGallery extends AppCompatActivity {
 
@@ -20,7 +22,7 @@ public class ActivityWhatsAppGallery extends AppCompatActivity {
     private TabLayout tabLayout;
 
     private AdView mAdView;
-    //private InterstitialAd mInterstitialAd;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,8 @@ public class ActivityWhatsAppGallery extends AppCompatActivity {
 
         findViewByIds();
         loadAdmobBannerAds();
+
+        mInterstitialAd = LoadAdmobAd.loadAdmobInterstitialAds(mInterstitialAd, this);
 
         //setup view pager with section page adapter
         mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
@@ -57,4 +61,11 @@ public class ActivityWhatsAppGallery extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+    }
 }
