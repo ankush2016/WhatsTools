@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.hbb20.CountryCodePicker;
 import com.whatstools.statussaver_directmessage.R;
 import com.whatstools.statussaver_directmessage.Utilities.LoadAdmobAd;
@@ -22,6 +23,7 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
     EditText etNumber;
 
     AdView mAdView;
+    private InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
         findViewByIds();
 
         LoadAdmobAd.loadAdmobBannerAds(mAdView);
+        mInterstitialAd = LoadAdmobAd.loadAdmobInterstitialAds(mInterstitialAd, this);
 
         ccp.registerCarrierNumberEditText(etNumber);
 
@@ -56,5 +59,13 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
         bSend = findViewById(R.id.bSend);
         etNumber = findViewById(R.id.etNumber);
         mAdView = findViewById(R.id.admob_banner_ad);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
     }
 }
