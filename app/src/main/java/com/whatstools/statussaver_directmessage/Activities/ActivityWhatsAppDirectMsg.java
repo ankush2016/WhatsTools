@@ -10,8 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdView;
 import com.hbb20.CountryCodePicker;
 import com.whatstools.statussaver_directmessage.R;
+import com.whatstools.statussaver_directmessage.Utilities.LoadAdmobAd;
 
 public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
 
@@ -19,12 +21,16 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
     Button bSend;
     EditText etNumber;
 
+    AdView mAdView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         findViewByIds();
+
+        LoadAdmobAd.loadAdmobBannerAds(mAdView);
 
         ccp.registerCarrierNumberEditText(etNumber);
 
@@ -49,5 +55,6 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
         ccp = findViewById(R.id.ccp);
         bSend = findViewById(R.id.bSend);
         etNumber = findViewById(R.id.etNumber);
+        mAdView = findViewById(R.id.admob_banner_ad);
     }
 }
