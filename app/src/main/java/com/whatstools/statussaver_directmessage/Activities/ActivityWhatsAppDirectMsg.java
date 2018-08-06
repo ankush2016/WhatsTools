@@ -1,6 +1,7 @@
 package com.whatstools.statussaver_directmessage.Activities;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,16 +41,20 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
         bSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!TextUtils.isEmpty(etNumber.getText().toString().trim())) {
-                    String number = ccp.getSelectedCountryCode() + etNumber.getText().toString().trim();
-                    //Toast.makeText(ActivityWhatsAppDirectMsg.this, number, Toast.LENGTH_SHORT).show();
-                    String url = "https://api.whatsapp.com/send?phone=" + number;
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setPackage("com.whatsapp");
-                    intent.setData(Uri.parse(url));
-                    startActivity(intent);
+                if(isPackageInstalled("com.whatsapp")) {
+                    if (!TextUtils.isEmpty(etNumber.getText().toString().trim())) {
+                        String number = ccp.getSelectedCountryCode() + etNumber.getText().toString().trim();
+                        //Toast.makeText(ActivityWhatsAppDirectMsg.this, number, Toast.LENGTH_SHORT).show();
+                        String url = "https://api.whatsapp.com/send?phone=" + number;
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setPackage("com.whatsapp");
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(ActivityWhatsAppDirectMsg.this, "Enter valid number", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
-                    Toast.makeText(ActivityWhatsAppDirectMsg.this, "Enter valid number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityWhatsAppDirectMsg.this, "WhatsApp Not Installed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -57,16 +62,20 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
         bSendWhatsAppBusiness.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!TextUtils.isEmpty(etNumber.getText().toString().trim())) {
-                    String number = ccp.getSelectedCountryCode() + etNumber.getText().toString().trim();
-                    //Toast.makeText(ActivityWhatsAppDirectMsg.this, number, Toast.LENGTH_SHORT).show();
-                    String url = "https://api.whatsapp.com/send?phone=" + number;
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setPackage("com.whatsapp.w4b");
-                    intent.setData(Uri.parse(url));
-                    startActivity(intent);
+                if(isPackageInstalled("com.whatsapp.w4b")) {
+                    if (!TextUtils.isEmpty(etNumber.getText().toString().trim())) {
+                        String number = ccp.getSelectedCountryCode() + etNumber.getText().toString().trim();
+                        //Toast.makeText(ActivityWhatsAppDirectMsg.this, number, Toast.LENGTH_SHORT).show();
+                        String url = "https://api.whatsapp.com/send?phone=" + number;
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setPackage("com.whatsapp.w4b");
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(ActivityWhatsAppDirectMsg.this, "Enter valid number", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
-                    Toast.makeText(ActivityWhatsAppDirectMsg.this, "Enter valid number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityWhatsAppDirectMsg.this, "WhatsApp Business not installed.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -85,6 +94,16 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
         super.onBackPressed();
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
+        }
+    }
+
+    private boolean isPackageInstalled(String packagename) {
+        try {
+            PackageManager packageManager = getPackageManager();
+            packageManager.getPackageInfo(packagename, 0);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
         }
     }
 }
