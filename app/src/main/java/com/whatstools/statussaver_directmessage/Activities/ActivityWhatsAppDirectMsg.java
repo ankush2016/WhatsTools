@@ -75,6 +75,7 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
     private void findViewByIds() {
         ccp = findViewById(R.id.ccp);
         bSend = findViewById(R.id.bSend);
+        bSendWhatsAppBusiness = findViewById(R.id.b_send_whatsapp_business);
         etNumber = findViewById(R.id.etNumber);
         mAdView = findViewById(R.id.admob_banner_ad);
     }
