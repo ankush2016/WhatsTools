@@ -19,7 +19,7 @@ import com.whatstools.statussaver_directmessage.Utilities.LoadAdmobAd;
 public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
 
     CountryCodePicker ccp;
-    Button bSend;
+    Button bSend, bSendWhatsAppBusiness;
     EditText etNumber;
 
     AdView mAdView;
@@ -45,6 +45,24 @@ public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
                     //Toast.makeText(ActivityWhatsAppDirectMsg.this, number, Toast.LENGTH_SHORT).show();
                     String url = "https://api.whatsapp.com/send?phone=" + number;
                     Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setPackage("com.whatsapp");
+                    intent.setData(Uri.parse(url));
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(ActivityWhatsAppDirectMsg.this, "Enter valid number", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        bSendWhatsAppBusiness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!TextUtils.isEmpty(etNumber.getText().toString().trim())) {
+                    String number = ccp.getSelectedCountryCode() + etNumber.getText().toString().trim();
+                    //Toast.makeText(ActivityWhatsAppDirectMsg.this, number, Toast.LENGTH_SHORT).show();
+                    String url = "https://api.whatsapp.com/send?phone=" + number;
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setPackage("com.whatsapp.w4b");
                     intent.setData(Uri.parse(url));
                     startActivity(intent);
                 } else {
