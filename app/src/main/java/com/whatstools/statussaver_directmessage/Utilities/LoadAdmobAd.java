@@ -12,6 +12,7 @@ public class LoadAdmobAd {
 
     public static void loadAdmobBannerAds(AdView mAdView) {
         AdRequest adRequest = new AdRequest.Builder().addTestDevice("25E662D1EDF4290CE580D9AA9FA945B9").build();
+        //AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
     }
 

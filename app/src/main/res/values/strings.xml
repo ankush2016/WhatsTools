@@ -8,6 +8,7 @@
     <string name="tab_text_3">Tab 3</string>
 
 
+    <string name="admob_test_ad">ca-app-pub-3940256099942544/6300978111</string>
     <string name="admob_banner_ad_id">ca-app-pub-5059726881726792/9722151397</string>
     <string name="admob_interstitial_ad_id">ca-app-pub-5059726881726792/4464683763</string>
 
