@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Activities;
+package com.whatstools.statussaver_directmessages.Activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -13,7 +13,7 @@ import android.widget.VideoView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.whatstools.statussaver_directmessage.R;
+import com.whatstools.statussaver_directmessages.R;
 
 import org.apache.commons.io.FileUtils;
 

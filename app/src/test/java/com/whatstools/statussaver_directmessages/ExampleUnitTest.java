@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage;
+package com.whatstools.statussaver_directmessages;
 
 import org.junit.Test;
 

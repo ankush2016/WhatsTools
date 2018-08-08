@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Activities;
+package com.whatstools.statussaver_directmessages.Activities;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,11 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.whatstools.statussaver_directmessage.Adapters.SectionsPageAdapter;
-import com.whatstools.statussaver_directmessage.Fragments.FragmentWhatsAppImages;
-import com.whatstools.statussaver_directmessage.Fragments.FragmentWhatsAppVideos;
-import com.whatstools.statussaver_directmessage.R;
-import com.whatstools.statussaver_directmessage.Utilities.LoadAdmobAd;
+import com.whatstools.statussaver_directmessages.Adapters.SectionsPageAdapter;
+import com.whatstools.statussaver_directmessages.Fragments.FragmentWhatsAppImages;
+import com.whatstools.statussaver_directmessages.Fragments.FragmentWhatsAppVideos;
+import com.whatstools.statussaver_directmessages.R;
+import com.whatstools.statussaver_directmessages.Utilities.LoadAdmobAd;
 
 public class ActivityWhatsAppGallery extends AppCompatActivity {
 

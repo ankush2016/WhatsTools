@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Activities;
+package com.whatstools.statussaver_directmessages.Activities;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -18,9 +18,9 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
-import com.whatstools.statussaver_directmessage.Extras.WhatsToolsConstants;
-import com.whatstools.statussaver_directmessage.R;
-import com.whatstools.statussaver_directmessage.Utilities.LoadAdmobAd;
+import com.whatstools.statussaver_directmessages.Extras.WhatsToolsConstants;
+import com.whatstools.statussaver_directmessages.R;
+import com.whatstools.statussaver_directmessages.Utilities.LoadAdmobAd;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.whatstools.statussaver_directmessage"
+        applicationId "com.whatstools.statussaver_directmessages"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

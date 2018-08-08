@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Utilities;
+package com.whatstools.statussaver_directmessages.Utilities;
 
 
 import android.content.Context;

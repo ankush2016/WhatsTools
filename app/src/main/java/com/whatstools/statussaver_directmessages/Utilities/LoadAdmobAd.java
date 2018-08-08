@@ -1,11 +1,11 @@
-package com.whatstools.statussaver_directmessage.Utilities;
+package com.whatstools.statussaver_directmessages.Utilities;
 
 import android.content.Context;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.whatstools.statussaver_directmessage.R;
+import com.whatstools.statussaver_directmessages.R;
 
 
 public class LoadAdmobAd {

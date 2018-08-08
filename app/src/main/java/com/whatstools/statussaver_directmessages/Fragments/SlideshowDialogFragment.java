@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Fragments;
+package com.whatstools.statussaver_directmessages.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,7 +20,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.whatstools.statussaver_directmessage.R;
+import com.whatstools.statussaver_directmessages.R;
 
 import org.apache.commons.io.FileUtils;
 

@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Activities;
+package com.whatstools.statussaver_directmessages.Activities;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,8 +14,8 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.hbb20.CountryCodePicker;
-import com.whatstools.statussaver_directmessage.R;
-import com.whatstools.statussaver_directmessage.Utilities.LoadAdmobAd;
+import com.whatstools.statussaver_directmessages.R;
+import com.whatstools.statussaver_directmessages.Utilities.LoadAdmobAd;
 
 public class ActivityWhatsAppDirectMsg extends AppCompatActivity {
 

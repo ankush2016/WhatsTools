@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Adapters;
+package com.whatstools.statussaver_directmessages.Adapters;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;

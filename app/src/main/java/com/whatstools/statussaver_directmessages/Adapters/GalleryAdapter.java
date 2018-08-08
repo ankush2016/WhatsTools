@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Adapters;
+package com.whatstools.statussaver_directmessages.Adapters;
 
 import android.content.Context;
 import android.net.Uri;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.whatstools.statussaver_directmessage.R;
+import com.whatstools.statussaver_directmessages.R;
 
 import java.io.File;
 import java.util.ArrayList;

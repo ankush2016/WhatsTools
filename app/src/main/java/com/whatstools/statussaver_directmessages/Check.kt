@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage
+package com.whatstools.statussaver_directmessages
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

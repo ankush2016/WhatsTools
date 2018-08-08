@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Fragments;
+package com.whatstools.statussaver_directmessages.Fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -17,11 +17,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.whatstools.statussaver_directmessage.Activities.ActivityVideoPlayer;
-import com.whatstools.statussaver_directmessage.Adapters.GalleryAdapter;
-import com.whatstools.statussaver_directmessage.Extras.WhatsToolsConstants;
-import com.whatstools.statussaver_directmessage.R;
-import com.whatstools.statussaver_directmessage.Utilities.RecyclerTouchListener;
+import com.whatstools.statussaver_directmessages.Activities.ActivityVideoPlayer;
+import com.whatstools.statussaver_directmessages.Adapters.GalleryAdapter;
+import com.whatstools.statussaver_directmessages.Extras.WhatsToolsConstants;
+import com.whatstools.statussaver_directmessages.R;
+import com.whatstools.statussaver_directmessages.Utilities.RecyclerTouchListener;
 
 import java.io.File;
 import java.io.FilenameFilter;

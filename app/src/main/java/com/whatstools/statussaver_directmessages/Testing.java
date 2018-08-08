@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage;
+package com.whatstools.statussaver_directmessages;
 
 import android.Manifest;
 import android.content.DialogInterface;

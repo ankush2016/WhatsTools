@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.whatstools.statussaver_directmessage.Utilities.SquareImageView
+    <com.whatstools.statussaver_directmessages.Utilities.SquareImageView
         android:id="@+id/thumbnail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

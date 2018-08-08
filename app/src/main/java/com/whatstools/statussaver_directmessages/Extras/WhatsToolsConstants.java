@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Extras;
+package com.whatstools.statussaver_directmessages.Extras;
 
 public class WhatsToolsConstants {
 

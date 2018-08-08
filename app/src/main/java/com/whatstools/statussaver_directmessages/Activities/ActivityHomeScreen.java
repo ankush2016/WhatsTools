@@ -1,4 +1,4 @@
-package com.whatstools.statussaver_directmessage.Activities;
+package com.whatstools.statussaver_directmessages.Activities;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -16,7 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.whatstools.statussaver_directmessage.R;
+import com.whatstools.statussaver_directmessages.R;
 
 public class ActivityHomeScreen extends AppCompatActivity {
 
