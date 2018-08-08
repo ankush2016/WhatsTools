@@ -86,12 +86,16 @@ public class FragmentWhatsAppImages extends Fragment {
                 }
             });
 
-            Arrays.sort(allFiles, new Comparator<File>() {
-                @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-                public int compare(File f1, File f2) {
-                    return Long.compare(f2.lastModified(), f1.lastModified());
-                }
-            });
+            try {
+                Arrays.sort(allFiles, new Comparator<File>() {
+                    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+                    public int compare(File f1, File f2) {
+                        return Long.compare(f2.lastModified(), f1.lastModified());
+                    }
+                });
+            } catch (Exception e){
+                e.printStackTrace();
+            }
 
             for (int i = 0; i < allFiles.length; i++) {
                 images.add(allFiles[i]);
