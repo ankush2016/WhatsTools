@@ -18,6 +18,7 @@ import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
+import com.onesignal.OneSignal;
 import com.whatstools.statussaver_directmessages.Extras.WhatsToolsConstants;
 import com.whatstools.statussaver_directmessages.R;
 import com.whatstools.statussaver_directmessages.Utilities.LoadAdmobAd;
@@ -45,6 +46,11 @@ public class ActivityHomeScreenFinal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen_final);
         ButterKnife.bind(this);
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
 
         LoadAdmobAd.loadAdmobBannerAds(mAdView);
     }
