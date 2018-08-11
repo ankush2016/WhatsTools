@@ -20,8 +20,8 @@ android {
         applicationId "com.whatstools.statussaver_directmessages"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 onesignal_app_id: '8211b2bb-9b26-473a-b2c5-a28cc8c195c3',

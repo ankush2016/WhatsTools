@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -66,6 +67,8 @@ public class ActivityWhatsAppGallery extends AppCompatActivity {
         super.onBackPressed();
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
+        } else {
+            Log.e("ADMOB AD", "mInterstitialAd not loaded");
         }
     }
 }
